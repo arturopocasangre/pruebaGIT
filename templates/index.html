@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inventario</title>
+</head>
+<body>
+  <h1>Inventario de Productos</h1>
+  <a href="{{ url_for('agregar') }}">Agregar producto</a>
+  <ul>
+    {% for p in productos %}
+      <li>
+        {{ p.nombre }} - ${{ p.precio }} (Stock: {{ p.stock }})
+        <a href="{{ url_for('eliminar', id=p.id) }}">Eliminar</a>
+      </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
