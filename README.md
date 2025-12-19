@@ -1,2 +1,0 @@
-# pruebaGIT
-nueva linea
